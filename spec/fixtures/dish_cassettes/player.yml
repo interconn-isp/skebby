@@ -1,0 +1,454 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://gateway.skebby.it/api/send/smseasy/advanced/rest.php?method=get_credit&password=password&username=john.doe
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 16 Feb 2014 14:15:25 GMT
+      Server:
+      - Apache
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '289'
+      Content-Type:
+      - text/xml
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" encoding="UTF-8"?>
+        <SkebbyApi_Public_Send_SmsEasy_Advanced generator="zend" version="1.0"><get_credit><credit_left>1.61972</credit_left><classic_sms>25</classic_sms><basic_sms>35</basic_sms><status>success</status></get_credit></SkebbyApi_Public_Send_SmsEasy_Advanced>
+    http_version:
+  recorded_at: Sun, 16 Feb 2014 14:15:25 GMT
+- request:
+    method: get
+    uri: https://gateway.skebby.it/api/send/smseasy/advanced/rest.php?method=get_credit&password=&username=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Sun, 16 Feb 2014 14:32:05 GMT
+      Server:
+      - Apache
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '287'
+      Connection:
+      - close
+      Content-Type:
+      - text/xml
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" encoding="UTF-8"?>
+        <SkebbyApi_Public_Send_SmsEasy_Advanced generator="zend" version="1.0"><get_credit><response><code>12</code><message>Set all the mandatory parameters</message></response><status>failed</status></get_credit></SkebbyApi_Public_Send_SmsEasy_Advanced>
+    http_version:
+  recorded_at: Sun, 16 Feb 2014 14:32:05 GMT
+- request:
+    method: post
+    uri: https://gateway.skebby.it/api/send/smseasy/advanced/rest.php?method=test_send_sms_classic&password=password&username=john.doe
+    body:
+      encoding: UTF-8
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Sun, 16 Feb 2014 14:37:44 GMT
+      Server:
+      - Apache
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '346'
+      Connection:
+      - close
+      Content-Type:
+      - text/xml
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" encoding="UTF-8"?>
+        <SkebbyApi_Public_Send_SmsEasy_Advanced generator="zend" version="1.0"><test_send_sms_classic><response><message>Invalid Method Call to test_send_sms_classic. Missing argument(s): recipients, text.</message></response><status>failed</status></test_send_sms_classic></SkebbyApi_Public_Send_SmsEasy_Advanced>
+    http_version:
+  recorded_at: Sun, 16 Feb 2014 14:37:44 GMT
+- request:
+    method: post
+    uri: https://gateway.skebby.it/api/send/smseasy/advanced/rest.php?method=test_send_sms_classic&password=password&recipients%5B0%5D=393459187391&text=Hello,%20world!&username=john.doe
+    body:
+      encoding: UTF-8
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Sun, 16 Feb 2014 14:39:27 GMT
+      Server:
+      - Apache
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '309'
+      Connection:
+      - close
+      Content-Type:
+      - text/xml
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" encoding="UTF-8"?>
+        <SkebbyApi_Public_Send_SmsEasy_Advanced generator="zend" version="1.0"><test_send_sms_classic><response><code>12</code><message>Set all the mandatory parameters</message></response><status>failed</status></test_send_sms_classic></SkebbyApi_Public_Send_SmsEasy_Advanced>
+    http_version:
+  recorded_at: Sun, 16 Feb 2014 14:39:27 GMT
+- request:
+    method: post
+    uri: https://gateway.skebby.it/api/send/smseasy/advanced/rest.php?method=test_send_sms_classic&password=password&recipients=%5B%22393459187391%22%5D&text=Hello,%20world!&username=john.doe
+    body:
+      encoding: UTF-8
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 16 Feb 2014 14:41:41 GMT
+      Server:
+      - Apache
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '255'
+      Content-Type:
+      - text/xml
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" encoding="UTF-8"?>
+        <SkebbyApi_Public_Send_SmsEasy_Advanced generator="zend" version="1.0"><test_send_sms_classic><remaining_sms>5</remaining_sms><status>success</status></test_send_sms_classic></SkebbyApi_Public_Send_SmsEasy_Advanced>
+    http_version:
+  recorded_at: Sun, 16 Feb 2014 14:41:41 GMT
+- request:
+    method: post
+    uri: https://gateway.skebby.it/api/send/smseasy/advanced/rest.php?method=test_send_sms_basic&password=password&recipients=%5B%22393459187391%22%5D&text=Hello,%20world!&username=john.doe
+    body:
+      encoding: UTF-8
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 16 Feb 2014 14:45:04 GMT
+      Server:
+      - Apache
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '251'
+      Content-Type:
+      - text/xml
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" encoding="UTF-8"?>
+        <SkebbyApi_Public_Send_SmsEasy_Advanced generator="zend" version="1.0"><test_send_sms_basic><remaining_sms>5</remaining_sms><status>success</status></test_send_sms_basic></SkebbyApi_Public_Send_SmsEasy_Advanced>
+    http_version:
+  recorded_at: Sun, 16 Feb 2014 14:45:04 GMT
+- request:
+    method: post
+    uri: https://gateway.skebby.it/api/send/smseasy/advanced/rest.php?method=test_send_sms_classic_report&password=password&recipients=%5B%22393459187391%22%5D&text=Hello,%20world!&username=john.doe
+    body:
+      encoding: UTF-8
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 16 Feb 2014 14:48:25 GMT
+      Server:
+      - Apache
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '288'
+      Content-Type:
+      - text/xml
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" encoding="UTF-8"?>
+        <SkebbyApi_Public_Send_SmsEasy_Advanced generator="zend" version="1.0"><test_send_sms_classic_report><remaining_sms>5</remaining_sms><id>1392562105</id><status>success</status></test_send_sms_classic_report></SkebbyApi_Public_Send_SmsEasy_Advanced>
+    http_version:
+  recorded_at: Sun, 16 Feb 2014 14:48:25 GMT
+- request:
+    method: post
+    uri: https://gateway.skebby.it/api/send/smseasy/advanced/rest.php?method=test_send_sms_classic&password=password&recipients=%5B%22393459187391%22,%22393786104981%22%5D&text=Hello,%20world!&username=john.doe
+    body:
+      encoding: UTF-8
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 16 Feb 2014 14:48:53 GMT
+      Server:
+      - Apache
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '255'
+      Content-Type:
+      - text/xml
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" encoding="UTF-8"?>
+        <SkebbyApi_Public_Send_SmsEasy_Advanced generator="zend" version="1.0"><test_send_sms_classic><remaining_sms>5</remaining_sms><status>success</status></test_send_sms_classic></SkebbyApi_Public_Send_SmsEasy_Advanced>
+    http_version:
+  recorded_at: Sun, 16 Feb 2014 14:48:53 GMT
+- request:
+    method: post
+    uri: https://gateway.skebby.it/api/send/smseasy/advanced/rest.php?method=test_send_sms_classic_report&password=password&recipients=%5B%22393459187391%22,%22393786104981%22%5D&text=Hello,%20world!&username=john.doe
+    body:
+      encoding: UTF-8
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 16 Feb 2014 14:48:54 GMT
+      Server:
+      - Apache
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '288'
+      Content-Type:
+      - text/xml
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" encoding="UTF-8"?>
+        <SkebbyApi_Public_Send_SmsEasy_Advanced generator="zend" version="1.0"><test_send_sms_classic_report><remaining_sms>5</remaining_sms><id>1392562134</id><status>success</status></test_send_sms_classic_report></SkebbyApi_Public_Send_SmsEasy_Advanced>
+    http_version:
+  recorded_at: Sun, 16 Feb 2014 14:48:54 GMT
+- request:
+    method: post
+    uri: https://gateway.skebby.it/api/send/smseasy/advanced/rest.php?method=test_send_sms_basic&password=password&recipients=%5B%22393459187391%22,%22393786104981%22%5D&text=Hello,%20world!&username=john.doe
+    body:
+      encoding: UTF-8
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 16 Feb 2014 14:48:54 GMT
+      Server:
+      - Apache
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '251'
+      Content-Type:
+      - text/xml
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" encoding="UTF-8"?>
+        <SkebbyApi_Public_Send_SmsEasy_Advanced generator="zend" version="1.0"><test_send_sms_basic><remaining_sms>5</remaining_sms><status>success</status></test_send_sms_basic></SkebbyApi_Public_Send_SmsEasy_Advanced>
+    http_version:
+  recorded_at: Sun, 16 Feb 2014 14:48:54 GMT
+- request:
+    method: post
+    uri: https://gateway.skebby.it/api/send/smseasy/advanced/rest.php?method=sens_sms&password=password&recipients=%5B%22393459187391%22,%22393786104981%22%5D&text=Hello,%20world!&username=john.doe
+    body:
+      encoding: UTF-8
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Sun, 16 Feb 2014 15:03:33 GMT
+      Server:
+      - Apache
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '181'
+      Connection:
+      - close
+      Content-Type:
+      - text/xml
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" encoding="UTF-8"?>
+        <sens_sms generator="zend" version="1.0"><response><message>Unknown Method 'sens_sms'.</message></response><status>failed</status></sens_sms>
+    http_version:
+  recorded_at: Sun, 16 Feb 2014 15:03:33 GMT
+- request:
+    method: post
+    uri: https://gateway.skebby.it/api/send/smseasy/advanced/rest.php?method=send_sms&password=password&recipients=%5B%22393459187391%22,%22393786104981%22%5D&text=Hello,%20world!&username=john.doe
+    body:
+      encoding: UTF-8
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Sun, 16 Feb 2014 15:05:26 GMT
+      Server:
+      - Apache
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '181'
+      Connection:
+      - close
+      Content-Type:
+      - text/xml
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" encoding="UTF-8"?>
+        <send_sms generator="zend" version="1.0"><response><message>Unknown Method 'send_sms'.</message></response><status>failed</status></send_sms>
+    http_version:
+  recorded_at: Sun, 16 Feb 2014 15:05:26 GMT
+- request:
+    method: post
+    uri: https://gateway.skebby.it/api/send/smseasy/advanced/rest.php?method=test_send_sms_classic_report&password=password&recipients=%5B%22393459187391%22,%22393786104981%22%5D&username=john.doe
+    body:
+      encoding: UTF-8
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Sun, 16 Feb 2014 15:08:14 GMT
+      Server:
+      - Apache
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '355'
+      Connection:
+      - close
+      Content-Type:
+      - text/xml
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" encoding="UTF-8"?>
+        <SkebbyApi_Public_Send_SmsEasy_Advanced generator="zend" version="1.0"><test_send_sms_classic_report><response><message>Invalid Method Call to test_send_sms_classic_report. Missing argument(s): text.</message></response><status>failed</status></test_send_sms_classic_report></SkebbyApi_Public_Send_SmsEasy_Advanced>
+    http_version:
+  recorded_at: Sun, 16 Feb 2014 15:08:14 GMT
+- request:
+    method: post
+    uri: https://gateway.skebby.it/api/send/smseasy/advanced/rest.php?method=test_send_sms_basic&password=password&recipients=%5B%22393459187391%22,%22393786104981%22%5D&username=john.doe
+    body:
+      encoding: UTF-8
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Sun, 16 Feb 2014 15:08:15 GMT
+      Server:
+      - Apache
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '328'
+      Connection:
+      - close
+      Content-Type:
+      - text/xml
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" encoding="UTF-8"?>
+        <SkebbyApi_Public_Send_SmsEasy_Advanced generator="zend" version="1.0"><test_send_sms_basic><response><message>Invalid Method Call to test_send_sms_basic. Missing argument(s): text.</message></response><status>failed</status></test_send_sms_basic></SkebbyApi_Public_Send_SmsEasy_Advanced>
+    http_version:
+  recorded_at: Sun, 16 Feb 2014 15:08:15 GMT
+- request:
+    method: post
+    uri: https://gateway.skebby.it/api/send/smseasy/advanced/rest.php?method=test_send_sms_classic&password=password&recipients=%5B%22393459187391%22,%22393786104981%22%5D&username=john.doe
+    body:
+      encoding: UTF-8
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Sun, 16 Feb 2014 15:08:15 GMT
+      Server:
+      - Apache
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '334'
+      Connection:
+      - close
+      Content-Type:
+      - text/xml
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" encoding="UTF-8"?>
+        <SkebbyApi_Public_Send_SmsEasy_Advanced generator="zend" version="1.0"><test_send_sms_classic><response><message>Invalid Method Call to test_send_sms_classic. Missing argument(s): text.</message></response><status>failed</status></test_send_sms_classic></SkebbyApi_Public_Send_SmsEasy_Advanced>
+    http_version:
+  recorded_at: Sun, 16 Feb 2014 15:08:15 GMT
+recorded_with: VCR 2.8.0
