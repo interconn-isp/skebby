@@ -1,6 +1,6 @@
 # Skebby
 
-TODO: Write a gem description
+This is a Ruby gem providing a wrapper around [Skebby](http://www.skebby.it/) RESTful API.
 
 ## Installation
 
@@ -18,7 +18,52 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Initialize the client
+
+To initialize the API client you only need to provide your credentials:
+
+```ruby
+skebby = Skebby::Client.new(username: 'john.doe', password: 'foobar')
+```
+
+### Check the remaining credit
+
+```ruby
+skebby.get_credit # { credit_left: 1.61972, classic_sms: 25, basic_sms: 35 }
+```
+
+### Send an SMS (SMS Classic)
+
+```ruby
+skebby.send_sms_classic(
+  recipients: ['393459187391', '393786104981'],
+  text:       'Hello, world!'
+) # { remaining_sms: 5 }
+```
+
+(Note: You can provide other parameters. For more info, check [Skebby's docs](http://www.skebby.it/business/index/send-docs/)).
+
+### Send an SMS (SMS Basic)
+
+```ruby
+skebby.send_sms_basic(
+  recipients: ['393459187391', '393786104981'],
+  text:       'Hello, world!'
+) # { remaining_sms: 5 }
+```
+
+(Note: You can provide other parameters. For more info, check [Skebby's docs](http://www.skebby.it/business/index/send-docs/)).
+
+### Send an SMS and request a read-receipt (SMS Classic Plus)
+
+```ruby
+skebby.send_sms_classic_report(
+  recipients: ['393459187391', '393786104981'],
+  text:       'Hello, world!'
+) # { remaining_sms: 5, dispatch_id: 1392562134 }
+```
+
+(Note: You can provide other parameters. For more info, check [Skebby's docs](http://www.skebby.it/business/index/send-docs/)).
 
 ## Contributing
 
