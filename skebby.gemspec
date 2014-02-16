@@ -20,10 +20,10 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency "httparty", "~> 0.13"
 
-  spec.add_development_dependency "webmock"
-  spec.add_development_dependency "vcr"
-  spec.add_development_dependency "bundler"
-  spec.add_development_dependency "rake"
-  spec.add_development_dependency "rspec"
-  spec.add_development_dependency "fuubar"
+  spec.add_development_dependency "webmock", '~> 1.17'
+  spec.add_development_dependency "vcr", '~> 2.8'
+  spec.add_development_dependency "bundler", '~> 1.5'
+  spec.add_development_dependency "rake", '~> 10.1'
+  spec.add_development_dependency "rspec", '~> 2.14'
+  spec.add_development_dependency "fuubar", '~> 1.3'
 end
