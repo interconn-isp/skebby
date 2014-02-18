@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["desa.alessandro@gmail.com"]
   spec.summary       = %q{A Ruby client for the Skebby SMS API.}
   spec.description   = %q{A Ruby client for the Skebby SMS API.}
-  spec.homepage      = "https://github.com/interconn/skebby"
+  spec.homepage      = "https://github.com/interconn-wisp/skebby"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
