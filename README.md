@@ -2,8 +2,8 @@
 
 **DISCONTINUED**
 
-**We're not using Skebby anymore, so this gem is not being maintained. For an
-alternative, see [Skuby](https://github.com/welaika/skuby).**
+**We're not using Skebby anymore, so this library is not being maintained. For
+an alternative, see the [Skuby](https://github.com/welaika/skuby) gem.**
 
 [![Gem Version](https://badge.fury.io/rb/skebby.png)](http://badge.fury.io/rb/skebby)
 [![Build Status](https://travis-ci.org/interconn-isp/skebby.png?branch=master)](https://travis-ci.org/interconn-isp/skebby)
