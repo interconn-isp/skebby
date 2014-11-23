@@ -1,4 +1,14 @@
-# Skebby [![Gem Version](https://badge.fury.io/rb/skebby.png)](http://badge.fury.io/rb/skebby) [![Build Status](https://travis-ci.org/interconn-wisp/skebby.png?branch=master)](https://travis-ci.org/interconn-wisp/skebby) [![Dependency Status](https://gemnasium.com/interconn-wisp/skebby.png)](https://gemnasium.com/interconn-wisp/skebby) [![Code Climate](https://codeclimate.com/github/interconn-wisp/skebby.png)](https://codeclimate.com/github/interconn-wisp/skebby)
+# Skebby
+
+**DISCONTINUED**
+
+**We're not using Skebby anymore, so this gem is not being maintained. For an
+alternative, see [Skuby](https://github.com/welaika/skuby).**
+
+[![Gem Version](https://badge.fury.io/rb/skebby.png)](http://badge.fury.io/rb/skebby)
+[![Build Status](https://travis-ci.org/interconn-isp/skebby.png?branch=master)](https://travis-ci.org/interconn-isp/skebby)
+[![Dependency Status](https://gemnasium.com/interconn-isp/skebby.png)](https://gemnasium.com/interconn-isp/skebby)
+[![Code Climate](https://codeclimate.com/github/interconn-isp/skebby.png)](https://codeclimate.com/github/interconn-isp/skebby)
 
 This is a Ruby gem providing a wrapper around [Skebby](http://www.skebby.it/)'s RESTful API.
 
